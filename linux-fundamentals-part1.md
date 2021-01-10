@@ -30,6 +30,7 @@
 
     1. What's the password for shiba2?
         a. pinguftw - The password can be found by running the binary shiba1. The binary won't do anything though until you create a file in the same directory called noot.txt.
+
 ## su
 
     1. How do you specify which shell is used when you login?
