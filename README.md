@@ -9,3 +9,5 @@ These are writeups for hacking practice site TryHackMe. At times these will be r
 [Linux Fundamentals Part 1](https://github.com/Johnson90512/tryhackme-writeups/blob/main/linux-fundamentals-part1.md) - Get introduced to the Linux basics by learning how to use fundamentally important commands. Put this into practice by deploying and accessing your own remote (web-based) Linux machine.
 
 [Linux Fundamentals Part 2](https://github.com/Johnson90512/tryhackme-writeups/blob/main/linux-fundamentals-part2.md) - Further adapt your Linux skills by understanding operators. Get hands-on and remotely access your own Linux machine to put your knowledge into use!
+
+[Linux Fundamentals Part 3](https://github.com/Johnson90512/tryhackme-writeups/blob/main/linux-fundamentals-part2.md) - Understand Linux advanced file operators, users & groups (permissions) and get an introduction to shell scripting; essential skills to have in cyber security.
