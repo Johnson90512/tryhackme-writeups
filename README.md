@@ -12,4 +12,6 @@ These are writeups for hacking practice site TryHackMe. At times these will be r
 
 [Linux Fundamentals Part 3](https://github.com/Johnson90512/tryhackme-writeups/blob/main/linux-fundamentals-part2.md) - Understand Linux advanced file operators, users & groups (permissions) and get an introduction to shell scripting; essential skills to have in cyber security.
 
-[Linux Challenges](https://github.com/Johnson90512/tryhackme-writeups/blob/main/linux-challenges.md) | Test your Linux skills by finding flags using various Linux commands and concepts. Do you have what it takes to solve these challenges?
+[Linux Challenges](https://github.com/Johnson90512/tryhackme-writeups/blob/main/linux-challenges.md) - Test your Linux skills by finding flags using various Linux commands and concepts. Do you have what it takes to solve these challenges?
+
+[Intro Networking](https://github.com/Johnson90512/tryhackme-writeups/blob/main/intro-networking.md) - An introduction to networking theory and basic networking tools.
