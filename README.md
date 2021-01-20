@@ -15,3 +15,5 @@ These are writeups for hacking practice site TryHackMe. At times these will be r
 [Linux Challenges](https://github.com/Johnson90512/tryhackme-writeups/blob/main/linux-challenges.md) - Test your Linux skills by finding flags using various Linux commands and concepts. Do you have what it takes to solve these challenges?
 
 [Intro Networking](https://github.com/Johnson90512/tryhackme-writeups/blob/main/intro-networking.md) - An introduction to networking theory and basic networking tools.
+
+[Nmap](https://github.com/Johnson90512/tryhackme-writeups/blob/main/nmap.md) - An in depth look at scanning with Nmap, a powerful network scanning tool.
