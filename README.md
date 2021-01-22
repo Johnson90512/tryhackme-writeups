@@ -17,3 +17,6 @@ These are writeups for hacking practice site TryHackMe. At times these will be r
 [Intro Networking](https://github.com/Johnson90512/tryhackme-writeups/blob/main/intro-networking.md) - An introduction to networking theory and basic networking tools.
 
 [Nmap](https://github.com/Johnson90512/tryhackme-writeups/blob/main/nmap.md) - An in depth look at scanning with Nmap, a powerful network scanning tool.
+
+[Network Services](https://github.com/Johnson90512/tryhackme-writeups/blob/main/network-services.md) - Learn about, then enumerate and exploit a variety of network services and misconfigurations.
+
