@@ -109,8 +109,7 @@
         a. vsftpd - 2.0.8 or later.
     4. What is the name of the file in the anonymous FTP directory?
         a. public_notice.txt
-    5. What do we think a possible username
-could be?
+    5. What do we think a possible username could be?
         a. mike - This was in the notice.
 
 ## Exploiting FTP
