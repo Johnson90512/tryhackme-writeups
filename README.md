@@ -20,4 +20,7 @@ These are writeups for hacking practice site TryHackMe. At times these will be r
 
 [Network Services](https://github.com/Johnson90512/tryhackme-writeups/blob/main/network-services.md) - Learn about, then enumerate and exploit a variety of network services and misconfigurations.
 
-[Network Services 2](https://github.com/Johnson90512/tryhackme-writeups/blob/main/network-services2.md) | Enumerating and Exploiting More Common Network Services & Misconfigurations
+[Network Services 2](https://github.com/Johnson90512/tryhackme-writeups/blob/main/network-services2.md) - Enumerating and Exploiting More Common Network Services & Misconfigurations
+
+[Web Fundamentals](https://github.com/Johnson90512/tryhackme-writeups/blob/main/web-fundamentals.md) - Learn how the web works!
+
