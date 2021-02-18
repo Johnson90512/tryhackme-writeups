@@ -27,3 +27,7 @@ These are writeups for hacking practice site TryHackMe. At times these will be r
 [Burp Suite](https://github.com/Johnson90512/tryhackme-writeups/blob/main/burp-suite.md) - Learn the basics and major components of Burp Suite, the de facto tool to use when performing web app testing.
 
 [John The Ripper](https://github.com/Johnson90512/tryhackme-writeups/blob/main/john-the-ripper.md) - Learn how to use John the Ripper - An extremely powerful and adaptable hash cracking tool.
+
+[Nessus](https://github.com/Johnson90512/tryhackme-writeups/blob/main/nessus.md) - Learn how to set up and use Nessus, a popular vulnerability scanner.
+
+[Hydra](https://github.com/Johnson90512/tryhackme-writeups/blob/main/hydra.md) - Learn about and use Hydra, a fast network logon cracker, to bruteforce and obtain a website's credentials.
