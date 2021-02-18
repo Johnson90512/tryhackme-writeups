@@ -16,7 +16,7 @@ These are writeups for hacking practice site TryHackMe. At times these will be r
 
 [Intro Networking](https://github.com/Johnson90512/tryhackme-writeups/blob/main/intro-networking.md) - An introduction to networking theory and basic networking tools.
 
-[Nmap](https://github.com/Johnson90512/tryhackme-writeups/blob/main/nmap.md) - An in depth look at scanning with Nmap, a powerful network scanning tool.
+[Nmap](https://github.com/Johnson90512/tryhackme-writeups/blob/main/Series/Pentesting%20Tools/Nmap.md) - An in depth look at scanning with Nmap, a powerful network scanning tool.
 
 [Network Services](https://github.com/Johnson90512/tryhackme-writeups/blob/main/network-services.md) - Learn about, then enumerate and exploit a variety of network services and misconfigurations.
 
@@ -24,10 +24,10 @@ These are writeups for hacking practice site TryHackMe. At times these will be r
 
 [Web Fundamentals](https://github.com/Johnson90512/tryhackme-writeups/blob/main/web-fundamentals.md) - Learn how the web works!
 
-[Burp Suite](https://github.com/Johnson90512/tryhackme-writeups/blob/main/burp-suite.md) - Learn the basics and major components of Burp Suite, the de facto tool to use when performing web app testing.
+[Burp Suite](https://github.com/Johnson90512/tryhackme-writeups/blob/main/Series/Pentesting%20Tools/burp-suite.md) - Learn the basics and major components of Burp Suite, the de facto tool to use when performing web app testing.
 
-[John The Ripper](https://github.com/Johnson90512/tryhackme-writeups/blob/main/john-the-ripper.md) - Learn how to use John the Ripper - An extremely powerful and adaptable hash cracking tool.
+[John The Ripper](https://github.com/Johnson90512/tryhackme-writeups/blob/main/Series/Pentesting%20Tools/john-the-ripper.md) - Learn how to use John the Ripper - An extremely powerful and adaptable hash cracking tool.
 
-[Nessus](https://github.com/Johnson90512/tryhackme-writeups/blob/main/nessus.md) - Learn how to set up and use Nessus, a popular vulnerability scanner.
+[Nessus](https://github.com/Johnson90512/tryhackme-writeups/blob/main/Series/Pentesting%20Tools/nessus.md) - Learn how to set up and use Nessus, a popular vulnerability scanner.
 
-[Hydra](https://github.com/Johnson90512/tryhackme-writeups/blob/main/hydra.md) - Learn about and use Hydra, a fast network logon cracker, to bruteforce and obtain a website's credentials.
+[Hydra](https://github.com/Johnson90512/tryhackme-writeups/blob/main/Series/Pentesting%20Tools/hydra.md) - Learn about and use Hydra, a fast network logon cracker, to bruteforce and obtain a website's credentials.
