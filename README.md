@@ -31,3 +31,5 @@ These are writeups for hacking practice site TryHackMe. At times these will be r
 [Nessus](https://github.com/Johnson90512/tryhackme-writeups/blob/main/Series/Pentesting%20Tools/nessus.md) - Learn how to set up and use Nessus, a popular vulnerability scanner.
 
 [Hydra](https://github.com/Johnson90512/tryhackme-writeups/blob/main/Series/Pentesting%20Tools/hydra.md) - Learn about and use Hydra, a fast network logon cracker, to bruteforce and obtain a website's credentials.
+
+[Wireshark 101](https://github.com/Johnson90512/tryhackme-writeups/blob/main/wireshark-101.md) - Learn the basics of Wireshark and how to analyze various protocols and PCAPs
